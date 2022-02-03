@@ -8,7 +8,7 @@ body:
     id: wallpaper
     attributes:
       label: Qual o arquivo .wallpaper?
-      description: Esse é o arquivo responsável por iniciar o aplicativo ele fica localizado um `/usr/share/applications/` ou em `/usr/share/tiger/xfce-config/applications/` (caso escolha `Exibir um aplicativo que foi oculto`)
+      description: Esse é o arquivo responsável por iniciar o wallpaper ele fica localizado um `/usr/share/wallpapers/` ou em `/usr/share/tiger/xfce-config/wallpapers/` (caso escolha `Exibir um aplicativo que foi oculto`)
       placeholder: "org.kde.kwrite.wallpaper"
     validations:
       required: true
@@ -16,13 +16,10 @@ body:
     id: type
     attributes:
       label: Qual o tipo de modificação você está sugerindo?
-      description: Diga o que você quer fazer com o aplicativo
+      description: Diga o que você quer fazer com o wallpaper
       options:
-        - Ocultar o aplicativo
-        - Exibir o aplicativo
-        - Retirar o aplicativo do painel de controle
-        - Usar o nome genérico (tipo de aplicação) como nome
-        - Definir um nome manualmente
+        - Enviar uma foto ou arte que você criou
+        - Editar um wallpaper existente
     validations:
       required: true
   - type: input
