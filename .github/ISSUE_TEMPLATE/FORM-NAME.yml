@@ -1,0 +1,43 @@
+name: Sugerir uma modificação no wallpaper
+description: Sugira um modificação no wallpaper
+title: "Sugestão de modificação no wallpaper"
+labels: ["Sugestão"]
+
+body:
+  - type: input
+    id: wallpaper
+    attributes:
+      label: Qual o arquivo .wallpaper?
+      description: Esse é o arquivo responsável por iniciar o aplicativo ele fica localizado um `/usr/share/applications/` ou em `/usr/share/tiger/xfce-config/applications/` (caso escolha `Exibir um aplicativo que foi oculto`)
+      placeholder: "org.kde.kwrite.wallpaper"
+    validations:
+      required: true
+  - type: dropdown
+    id: type
+    attributes:
+      label: Qual o tipo de modificação você está sugerindo?
+      description: Diga o que você quer fazer com o aplicativo
+      options:
+        - Ocultar o aplicativo
+        - Exibir o aplicativo
+        - Retirar o aplicativo do painel de controle
+        - Usar o nome genérico (tipo de aplicação) como nome
+        - Definir um nome manualmente
+    validations:
+      required: true
+  - type: input
+    id: new_name
+    attributes:
+      label: Qual o novo nome
+      description: "Caso tenha escolhido `Definir um nome manualmente` digite o nome sugerido no campo abaixo"
+      placeholder: "Editor de textos"
+    validations:
+      required: false
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: "Termo de bom senso"
+      description: Você confirma que não está enviando sugestão de conteúdo racista, sexista, sexual, gore, apologia a violência, preferência política ou conteúdo sensível e/ou proíbido para menores de 18 anos?
+      options:
+        - label: Sim, não estou
+          required: true
